@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Overfloaters - Color Scheme Mockup</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            :root {
+                --deep-ocean: #1a2332;
+                --maritime-teal: #2d5f6f;
+                --warm-brass: #d4a574;
+                --misty-gray: #8a9ba8;
+                --cream: #f5f1e8;
+                --seafoam: #7ba89c;
+            }
+
+            body {
+                font-family: "Georgia", serif;
+                background: var(--deep-ocean);
+                color: var(--cream);
+                line-height: 1.6;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            /* Header */
+            header {
+                background: var(--deep-ocean);
+                padding: 20px 0;
+                border-bottom: 1px solid var(--maritime-teal);
+            }
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                font-size: 28px;
+                font-weight: bold;
+                color: var(--warm-brass);
+                letter-spacing: 2px;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 30px;
+                list-style: none;
+            }
+
+            .nav-links a {
+                color: var(--cream);
+                text-decoration: none;
+                transition: color 0.3s;
+                font-size: 16px;
+            }
+
+            .nav-links a:hover {
+                color: var(--seafoam);
+            }
+
+            /* Hero Section */
+            .hero {
+                background: linear-gradient(
+                    135deg,
+                    var(--deep-ocean) 0%,
+                    var(--maritime-teal) 100%
+                );
+                padding: 100px 0;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 56px;
+                margin-bottom: 20px;
+                color: var(--cream);
+                font-weight: normal;
+                letter-spacing: 3px;
+            }
+
+            .hero p {
+                font-size: 20px;
+                color: var(--misty-gray);
+                max-width: 700px;
+                margin: 0 auto 40px;
+            }
+
+            .cta-button {
+                display: inline-block;
+                background: var(--warm-brass);
+                color: var(--deep-ocean);
+                padding: 15px 40px;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: bold;
+                border-radius: 4px;
+                transition: all 0.3s;
+                margin: 0 10px;
+            }
+
+            .cta-button:hover {
+                background: var(--seafoam);
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(123, 168, 156, 0.3);
+            }
+
+            .cta-secondary {
+                background: transparent;
+                border: 2px solid var(--warm-brass);
+                color: var(--warm-brass);
+            }
+
+            .cta-secondary:hover {
+                background: var(--warm-brass);
+                color: var(--deep-ocean);
+            }
+
+            /* About Section */
+            .about {
+                padding: 80px 0;
+                background: var(--maritime-teal);
+            }
+
+            .about h2 {
+                font-size: 42px;
+                margin-bottom: 30px;
+                color: var(--warm-brass);
+                text-align: center;
+            }
+
+            .about p {
+                font-size: 18px;
+                max-width: 800px;
+                margin: 0 auto 20px;
+                text-align: center;
+                color: var(--cream);
+            }
+
+            /* Music Section */
+            .music {
+                padding: 80px 0;
+                background: var(--deep-ocean);
+            }
+
+            .music h2 {
+                font-size: 42px;
+                margin-bottom: 50px;
+                color: var(--warm-brass);
+                text-align: center;
+            }
+
+            .albums {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 40px;
+            }
+
+            .album-card {
+                background: var(--maritime-teal);
+                padding: 30px;
+                border-radius: 8px;
+                transition: all 0.3s;
+                border: 2px solid transparent;
+            }
+
+            .album-card:hover {
+                border-color: var(--seafoam);
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(123, 168, 156, 0.2);
+            }
+
+            .album-card h3 {
+                color: var(--warm-brass);
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            .album-card p {
+                color: var(--misty-gray);
+                margin-bottom: 20px;
+            }
+
+            .listen-link {
+                color: var(--seafoam);
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+
+            .listen-link:hover {
+                color: var(--warm-brass);
+            }
+
+            /* Color Palette Display */
+            .color-palette {
+                padding: 80px 0;
+                background: var(--cream);
+                color: var(--deep-ocean);
+            }
+
+            .color-palette h2 {
+                font-size: 42px;
+                margin-bottom: 50px;
+                color: var(--deep-ocean);
+                text-align: center;
+            }
+
+            .palette-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+            }
+
+            .color-swatch {
+                text-align: center;
+            }
+
+            .swatch {
+                width: 100%;
+                height: 150px;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                border: 3px solid var(--deep-ocean);
+            }
+
+            .color-name {
+                font-weight: bold;
+                margin-bottom: 5px;
+                color: var(--deep-ocean);
+            }
+
+            .color-hex {
+                font-family: monospace;
+                color: var(--maritime-teal);
+            }
+
+            /* Footer */
+            footer {
+                background: var(--deep-ocean);
+                padding: 40px 0;
+                text-align: center;
+                border-top: 1px solid var(--maritime-teal);
+            }
+
+            footer p {
+                color: var(--misty-gray);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">OVERFLOATERS</div>
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#music">Music</a></li>
+                        <li><a href="#tour">Tour</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <h1>Instrumental Journeys</h1>
+                <p>
+                    Weaving musical narratives without words. Drawing
+                    inspiration from cinematic worlds, folklore, and vivid
+                    storytelling through nujazz and fusion.
+                </p>
+                <a href="#" class="cta-button">Listen Now</a>
+                <a href="#" class="cta-button cta-secondary">Tour Dates</a>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2>The Voyage</h2>
+                <p>
+                    Overfloaters is an instrumental nujazz/fusion band from
+                    Prague, weaving musical narratives without words. Drawing
+                    inspiration from cinematic worlds, folklore, and vivid
+                    storytelling, their compositions blend rich textures,
+                    evolving melodies, and genre-bending improvisation.
+                </p>
+                <p>
+                    Each track unfolds like a journey — from the mystical
+                    medieval kingdom of Sedmý Král (The Seventh King) to the
+                    open seas of their debut Мореход (Sailor).
+                </p>
+            </div>
+        </section>
+
+        <section class="music" id="music">
+            <div class="container">
+                <h2>Discography</h2>
+                <div class="albums">
+                    <div class="album-card">
+                        <h3>Sedmý Král</h3>
+                        <p>
+                            The Seventh King - A mystical journey through
+                            medieval folklore and imagined kingdoms.
+                        </p>
+                        <a href="#" class="listen-link">Listen on Spotify →</a>
+                    </div>
+                    <div class="album-card">
+                        <h3>Мореход (Sailor)</h3>
+                        <p>
+                            Debut album capturing the essence of maritime
+                            voyages and distant horizons.
+                        </p>
+                        <a href="#" class="listen-link">Listen on Bandcamp →</a>
+                    </div>
+                    <div class="album-card">
+                        <h3>Povídky Šikudy</h3>
+                        <p>
+                            Experimental tales woven through intricate jazz-rock
+                            textures.
+                        </p>
+                        <a href="#" class="listen-link">Stream Now →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="color-palette">
+            <div class="container">
+                <h2>Color Palette Reference</h2>
+                <div class="palette-grid">
+                    <div class="color-swatch">
+                        <div
+                            class="swatch"
+                            style="background: var(--deep-ocean)"
+                        ></div>
+                        <div class="color-name">Deep Ocean Navy</div>
+                        <div class="color-hex">#1a2332</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div
+                            class="swatch"
+                            style="background: var(--maritime-teal)"
+                        ></div>
+                        <div class="color-name">Maritime Teal</div>
+                        <div class="color-hex">#2d5f6f</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div
+                            class="swatch"
+                            style="background: var(--warm-brass)"
+                        ></div>
+                        <div class="color-name">Warm Brass</div>
+                        <div class="color-hex">#d4a574</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div
+                            class="swatch"
+                            style="background: var(--misty-gray)"
+                        ></div>
+                        <div class="color-name">Misty Gray</div>
+                        <div class="color-hex">#8a9ba8</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div
+                            class="swatch"
+                            style="background: var(--cream)"
+                        ></div>
+                        <div class="color-name">Cream/Parchment</div>
+                        <div class="color-hex">#f5f1e8</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div
+                            class="swatch"
+                            style="background: var(--seafoam)"
+                        ></div>
+                        <div class="color-name">Seafoam Accent</div>
+                        <div class="color-hex">#7ba89c</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>© 2024 Overfloaters • Prague, Czech Republic</p>
+            </div>
+        </footer>
+    </body>
+</html>
