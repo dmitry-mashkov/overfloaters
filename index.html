@@ -428,6 +428,73 @@
             margin-top: 10px;
         }
 
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: var(--maritime-teal);
+        }
+
+        .contact h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: var(--warm-brass);
+            text-align: center;
+        }
+
+        .contact-intro {
+            font-size: 20px;
+            color: var(--cream);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: var(--deep-ocean);
+            padding: 35px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .contact-card:hover {
+            border-color: var(--seafoam);
+            transform: translateY(-5px);
+        }
+
+        .contact-card h3 {
+            color: var(--warm-brass);
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .contact-card a {
+            color: var(--seafoam);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+            word-break: break-word;
+        }
+
+        .contact-card a:hover {
+            color: var(--warm-brass);
+        }
+
+        .contact-card p {
+            color: var(--misty-gray);
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
         /* Footer */
         footer {
             background: var(--deep-ocean);
@@ -504,8 +571,8 @@
         <h1>Instrumental Journeys</h1>
         <p>Weaving musical narratives without words. Drawing inspiration from cinematic worlds, folklore, and vivid
             storytelling through nujazz and fusion.</p>
-        <a href="#" class="cta-button">Listen Now</a>
-        <a href="#" class="cta-button cta-secondary">Tour Dates</a>
+        <a href="https://open.spotify.com/artist/0r3V7fIGPG9SX9iNk4SuQC" class="cta-button" target="_blank">Listen Now</a>
+        <a href="https://www.bandsintown.com/a/15582881-overfloaters" class="cta-button cta-secondary" target="_blank">Tour Dates</a>
     </div>
 </section>
 
@@ -575,17 +642,17 @@
             <div class="album-card">
                 <h3>Sedmý Král</h3>
                 <p>The Seventh King - A mystical journey through medieval folklore and imagined kingdoms.</p>
-                <a href="#" class="listen-link">Listen on Spotify →</a>
+                <a href="https://open.spotify.com/track/5xhgi0udQQP42fuXThHMam" class="listen-link" target="_blank">Listen on Spotify →</a>
             </div>
             <div class="album-card">
                 <h3>Мореход (Sailor)</h3>
                 <p>Debut album capturing the essence of maritime voyages and distant horizons.</p>
-                <a href="#" class="listen-link">Listen on Bandcamp →</a>
+                <a href="https://overfloaters.bandcamp.com/album/-" class="listen-link" target="_blank">Listen on Bandcamp →</a>
             </div>
             <div class="album-card">
                 <h3>Povídky Šikudy</h3>
                 <p>Experimental tales woven through intricate jazz-rock textures.</p>
-                <a href="#" class="listen-link">Stream Now →</a>
+                <a href="https://open.spotify.com/album/26demWSzu85ffy96ZpLgyO" class="listen-link" target="_blank">Stream Now →</a>
             </div>
         </div>
     </div>
@@ -632,6 +699,30 @@
                 <a href="https://overfloaters.bandcamp.com/album/pov-dky-ikudy" class="buy-button" target="_blank"
                    rel="noopener">Buy on Bandcamp</a>
                 <p class="bandcamp-note">Powered by Bandcamp • Instant download</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <p class="contact-intro">Whether you're interested in booking us for a show, collaborating, or just want to say hello, we'd love to hear from you.</p>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Email</h3>
+                <a href="mailto:overfloaterscz@gmail.com">overfloaterscz@gmail.com</a>
+                <p>General inquiries & bookings</p>
+            </div>
+            <div class="contact-card">
+                <h3>Social Media</h3>
+                <a href="https://www.facebook.com/overfloaters/" target="_blank" rel="noopener">Facebook</a>
+                <p>Follow our journey</p>
+            </div>
+            <div class="contact-card">
+                <h3>Bandcamp</h3>
+                <a href="https://overfloaters.bandcamp.com/" target="_blank" rel="noopener">overfloaters.bandcamp.com</a>
+                <p>Music & merch</p>
             </div>
         </div>
     </div>
