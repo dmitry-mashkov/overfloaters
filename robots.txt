@@ -1,0 +1,21 @@
+# robots.txt for https://overfloaters.com
+# Generated on 2025-11-21. This site is a single-page application (SPA).
+# Policy: Only allow the main page and static assets needed for rich snippets/thumbnails.
+# If you later add more public pages, update the allowlist accordingly.
+
+User-agent: *
+# Block everything by default
+Disallow: /
+
+# Allow just the homepage
+Allow: /$
+Allow: /index.html
+
+# Allow images so they can appear in search results
+Allow: /img/
+
+# If you later add a sitemap at /sitemap.xml, uncomment the next line:
+# Sitemap: https://overfloaters.com/sitemap.xml
+ßç
+# Some crawlers (e.g., Yandex) support a Host directive; optional here:
+Host: overfloaters.com
